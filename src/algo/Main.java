@@ -28,9 +28,9 @@ public class Main {
 //		cau10();
 //		cau11();
 //		cau12();
-//		cau13();
+		cau13();
 //		cau14();
-		cau15();
+//		cau15();
 	}
 	
 	//In dãy số 1, 2, 3, 4, 5 … n (n là số được nhập vào từ bàn phím) bằng vòng lặp for.
@@ -50,11 +50,6 @@ public class Main {
 			}
 		}
 		// Cach 2
-		for (int i = 1; i <= n; i++) {
-			if (i % 2 == 1) {
-				System.out.println(i);
-			}
-		}
 	}
 	// In dãy số 2, 4, 6, 8, 10 … 2n (n là số được nhập vào từ bàn phím) bằng vòng lặp for.
 	public static void cau3() {
@@ -172,12 +167,19 @@ public class Main {
 	public static void cau13() {
 		int m = InputHelper.checkInteger("Hãy nhập số nguyên: ");
 		int rs = 0;
+		int rs2 = 1;
 		int i = 1;
 		while (i <= m) {
 			rs += m / i % 10;
 			i *= 10;
 		}
+		int t = 1;
+		while (t <= m) {
+			rs2 *= m / t % 10;
+			t *= 10;
+		}
 		System.out.println(rs);
+		System.out.println(rs2);
 	}
 	// Nhập 2 số nguyên dương a và b. Sau đó in ra ước số chung lớn nhất (USCLN) và bội số chung nhỏ nhất (BSCNN) của 2 số nguyên dương a và b đó.
 	public static void cau14() {
@@ -211,6 +213,5 @@ public class Main {
 		 for (int i = 1; i <= 10; i++)
 	            for (int j = 2; j <= 20; j++)
 	                     System.out.println("i="  + i + " j=" + j);
-
 	}
 }
