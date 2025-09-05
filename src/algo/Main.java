@@ -24,11 +24,11 @@ public class Main {
 //		cau6();
 //		cau7();
 //		cau8();
-//		cau9();
+		cau9();
 //		cau10();
 //		cau11();
 //		cau12();
-		cau13();
+//		cau13();
 //		cau14();
 //		cau15();
 	}
@@ -49,7 +49,10 @@ public class Main {
 				System.out.println(i);
 			}
 		}
-		// Cach 2
+//		 Cach 2
+		for (int t = 1; t <= n; t+=2) {
+			System.out.println(t);
+		}
 	}
 	// In dãy số 2, 4, 6, 8, 10 … 2n (n là số được nhập vào từ bàn phím) bằng vòng lặp for.
 	public static void cau3() {
@@ -93,6 +96,11 @@ public class Main {
 			}
 		}
 		// Cach 2
+		int s = 1;
+		for (int i = 2; i <= n; i+=2) {
+			System.out.println(i*s);
+			s = -s;
+		}
 	}
 	// Tính giai thừa của số n (n là số được nhập vào từ bàn phím) bằng cách sử dụng vòng lặp for.
 	public static void cau7() {
@@ -124,6 +132,11 @@ public class Main {
 			i++;
 		}
 		// Cach 2
+		int t = 1;
+		while (t <= n) {
+			System.out.println(t);
+			t+=2;
+		}
 	}
 	// In dãy số 1, 2, 3, 5, 8, 13, …n (n là số được nhập vào từ bàn phím) bằng vòng lặp while.
 	public static void cau10() {
