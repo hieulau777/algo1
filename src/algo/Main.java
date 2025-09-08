@@ -24,13 +24,21 @@ public class Main {
 //		cau6();
 //		cau7();
 //		cau8();
-		cau9();
+//		cau9();
 //		cau10();
 //		cau11();
 //		cau12();
 //		cau13();
 //		cau14();
-//		cau15();
+//		cau15_16();
+//		cau17();
+//		cau18();
+//		cau19();
+//		cau20();
+//		cau21();
+//		cau23();
+		cau24();
+		
 	}
 	
 	//In dãy số 1, 2, 3, 4, 5 … n (n là số được nhập vào từ bàn phím) bằng vòng lặp for.
@@ -222,9 +230,301 @@ public class Main {
 		System.out.println("Uoc chung lon nhat cua " + a + " va " + b + " = " + ucln);
 		System.out.println("Boi chung nho nhat cua " + a + " va " + b + " = " + bcnn);
 	}
-	public static void cau15() {
-		 for (int i = 1; i <= 10; i++)
-	            for (int j = 2; j <= 20; j++)
-	                     System.out.println("i="  + i + " j=" + j);
+	public static void cau15_16() {
+		System.out.println("Kết luận: ");
+		System.out.println("Thứ nhất: vòng lặp for ở ngoài sẽ chạy đầu tiên, và khi phát hiện vòng lặp for"
+				+ "\nở trong, nó sẽ chạy hết vòng lặp ở trong, rồi chạy lại vòng lặp ngoài rồi chạy tiếp vòng lặp ở trong cho đến khi hết vòng lặp ngoài");
+		System.out.println("Thứ hai: Việc sử dụng dấu { sau mỗi lệnh for sẽ giúp chạy được nhiều dòng lệnh ở bên trong");
+	}
+	// Viết chương trình tính:
+	// S = 1+1/2!+1/3!+…..+1/n!                    (Số n được nhập từ bàn phím)
+	public static void cau17() {
+		int n = InputHelper.checkInteger("Hãy nhập số nguyên: ");
+		double rs = 0;
+		for (int i = 1; i <= n; i++) {
+			double f = 1;
+			for (int j = 1; j <= i; j++) {
+				f *= j;
+			}
+			rs += 1/f;
+		}
+		System.out.println(rs);
+	}
+	// Viết chương trình tính:
+	// S = 1+1/3!+1/5!+…..+1/(2n-1)!  
+	public static void cau18() {
+		int n = InputHelper.checkInteger("Hãy nhập số nguyên: ");
+		double rs = 0;
+		for (int i = 1; i <= n; i++) {
+			int c = 2 * i - 1;
+			double f = 1;
+			for (int j = 1; j <= c; j++) {
+				f *= j;
+			}
+			rs += 1/f;
+		}
+		System.out.println(rs);
+	}
+	// In hình vuông A
+	public static void cau19() {
+		int n = InputHelper.checkInteger("Hãy nhập số nguyên: ");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				System.out.print("A");
+			}
+			System.out.println();
+		}
+	}
+	// In hinh vuong AA BB
+	public static void cau20() {
+		int n = InputHelper.checkInteger("Hãy nhập số nguyên: ");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (i % 2 == 1) {
+					System.out.print("A");
+				} else {
+					System.out.print("B");
+				}
+			}
+			System.out.println();
+		}
+	}
+	// In hinh vuong ABAB
+	public static void cau21() {
+		int n = InputHelper.checkInteger("Hãy nhập số nguyên: ");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (j % 2 == 1) {
+					System.out.print("A");
+				} else {
+					System.out.print("B");
+				}
+			}
+			System.out.println();
+		}
+	}
+	public static void cau22() {
+		int n = InputHelper.checkInteger("Hãy nhập số nguyên: ");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (i == 1 || i == n) {
+					System.out.print("*");
+				} else {
+					if (j == 1 || j == n) {
+						System.out.print("*");
+					} else {
+						System.out.print(" ");
+					}
+				}
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (i == 1 || i == n) {
+					System.out.print("*");
+				} else {
+					if (j == 1) {
+						System.out.print("*");
+					}
+				}
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (i == 1 || i == n) {
+					System.out.print("*");
+				} else {
+					if (j == n) {
+						System.out.print("*");
+					} else {
+						System.out.print(" ");
+					}
+				}
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (i == n) {
+					System.out.print("*");
+				} else {
+					if (j == 1 || j == n) {
+						System.out.print("*");
+					} else {
+						System.out.print(" ");
+					}
+				}
+			}
+			System.out.println();
+		}
+	}
+	public static void cau23() {
+		int n = InputHelper.checkInteger("Hãy nhập số nguyên: ");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = 1; i <= n; i++) {
+			for (int j = n; j >= i; j--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (j <= n - i) {
+					System.out.print(" ");
+				} else {
+					System.out.print("*");
+				}
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = n; i >= 1; i--) {
+			for (int j = 1; j <= n; j++) {
+				if (j <= n - i) {
+					System.out.print(" ");
+				} else {
+					System.out.print("*");
+
+				}
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (i == 1) {
+					System.out.print("*");
+				} else {
+					if (j == 1 || j == n - i + 1) {
+						System.out.print("*");
+					} else {
+						System.out.print(" ");
+					}
+				}
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = 1; i <= n; i+=2) {
+			for (int j = 1; j <= n; j++) {
+				if (j <= (n - i)/2) {
+					System.out.print(" ");
+				}
+			}
+			for (int k = 1; k <= i; k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		if (n % 2 == 0) {
+			n = n - 1;
+		}
+		for (int i = n; i >= 1; i-=2) {
+			for (int j = 1; j <= n; j++) {
+				if (j <= (n - i)/2) {
+					System.out.print(" ");
+				}
+			}
+			for (int k = 1; k <= i; k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void cau24() {
+		int n = InputHelper.checkInteger("Hãy nhập số nguyên: ");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (i == 1 || i == n) {
+					System.out.print("*");
+				} else {
+					if (j < i) {
+						System.out.print(" ");
+					}
+				}
+			}
+			if (i != 1 && i != n) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (i == 1 || i == n) {
+					System.out.print("*");
+				} else {
+					if (j >= i + 1) {
+						System.out.print(" ");
+					}
+				}
+			}
+			if (i != 1 && i != n) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (i == 1 || i == n) {
+					System.out.print("*");
+				} else {
+					if (i % 2 == 0) {
+						if (j % 2 == 1) {
+							System.out.print(" ");
+						} else {
+							System.out.print("*");
+						}
+					} else {
+						if (j % 2 == 0) {
+							System.out.print(" ");
+						} else {
+							System.out.print("*");
+						}
+					}
+				}
+			}
+			System.out.println();
+		}
+		System.out.println("==========================");
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				if (i == 1 || i == n) {
+					System.out.print("*");
+				} else {
+					if (j == 1 || j == n) {
+						System.out.print("*");
+					} else if (j == i) {
+						System.out.print("*");
+					} else {
+						System.out.print(" ");
+
+					}
+				}
+			}
+			System.out.println();
+		}
 	}
 }
